@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `cuisine_db`
 --
+CREATE DATABASE cuisine_db2;
+use cuisine_db2;
 
 -- --------------------------------------------------------
 
