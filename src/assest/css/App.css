@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body{
+  overflow-x: hidden;
+}
+.flex{
+  display: flex;
+}
+h1{
+  color: #6b8e23;
+  font-family: 'Ubuntu'
+  /* color: #gold; */
+}
+p{
+  font-family: 'Ubuntu'
+}
+
+.btn_primary, button{
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Ubuntu';
+  font-weight: 600;
+  background-color: gold;
+  border:  none;
+  padding: 8px 16px;
+  border-radius: 30px;
+  color: #6b8e23;
+  cursor: pointer;
+  transition-duration: 0.3s;
+
+
+}
+.btn_primary:hover ,button:hover{
+  background-color: #6b8e23;
+  border: 1px solid #6b8e23;
+  scale: 1.1;
+  color: White;
+}
+
+.aut__hbtn{
+  justify-content: center;
+  width: 80%;
+  padding: 16px 16px;
+  margin-top: 15px;
+}
+.aut__hbtn:hover{
+  border: solid 1px #6b8e23;
+  background-color: transparent;
+  color: #6b8e23 ;
+  scale: 1
+  
+
+}

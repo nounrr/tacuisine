@@ -1,0 +1,25 @@
+/* SignIn.css */
+
+/* Style global pour les champs d'entrée */
+.input-field .MuiInput-underline:after {
+  border-bottom-color: #6b8e23; /* Ligne après focus */
+}
+.input-field .MuiInputLabel-root.Mui-focused {
+  color: #6b8e23; /* Couleur du label lorsqu'il est focus */
+  transform:  translate(0px, -9px) scale(0.75);
+}
+/* lable dans l'etat normale */
+.input-field .MuiInputLabel-root{
+  transform:    translate(0px, 16px) scale(1)  ;
+}
+.input-field .MuiOutlinedInput-root fieldset {
+  border-color: #6b8e23; /* Bordure normale */
+}
+
+.input-field .MuiOutlinedInput-root:hover fieldset {
+  border-color: #6b8e23; /* Bordure en hover */
+}
+
+.input-field .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: #6b8e23; /* Bordure lorsqu'il est focus */
+}
