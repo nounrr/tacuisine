@@ -1,15 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-import ColorButtons from './Button';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Bienvenue from './components/BienvenuPages/Bienvenue';
+import Tables from './Tables';
+import PhoneNav from './components/NavBar/PhoneNav';
+const App = () => {
+    
 
-function App() {
-  return (
-    <div className="App">
-     <ColorButtons/>
-    </div>
-  );
-}
-
-
+    return (
+        <Router>
+            <Routes>
+                {/* <Route path="/" element={<Onboarding/>} /> */}
+                <Route path="/" element={<PhoneNav/>} />
+                {/* <Route path="/" element={<Tables/>} /> */}
+            </Routes>
+        </Router>
+    );
+};
 
 export default App;
