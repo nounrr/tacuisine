@@ -10,7 +10,11 @@ CREATE TABLE utilisateurs (
     nom_utilisateur VARCHAR(255) UNIQUE NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
     mot_de_passe VARCHAR(255) NOT NULL, -- Stocker le hash du mot de passe, PAS le mot de passe en clair
-    date_inscription TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    date_naissance DATE,
+    ville VARCHAR(255) NOT NULL,
+    sexe VARCHAR(25) NOT NULL,
+    date_inscription TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
 );
 
 -- Table des catégories de recettes
@@ -89,88 +93,7 @@ CREATE TABLE commentaires (
     FOREIGN KEY (recette_id) REFERENCES recettes(id)
 );
 
--- Insertion de quelques catégories de base (Exemple)
-INSERT INTO categories (nom_categorie) VALUES
-('Entrée'), ('Plat principal'), ('Dessert'), ('Boisson'), ('Accompagnement');
-
-
-
-
-CREATE TABLE utilisateurs (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nom_utilisateur VARCHAR(255) UNIQUE NOT NULL,
-    email VARCHAR(255) UNIQUE NOT NULL,
-    mot_de_passe VARCHAR(255) NOT NULL, 
-    date_inscription TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
-CREATE TABLE categories (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nom_categorie VARCHAR(255) UNIQUE NOT NULL
-);
-
-CREATE TABLE ingredients (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nom_ingredient VARCHAR(255) UNIQUE NOT NULL
-);
-
-
-CREATE TABLE recettes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    titre VARCHAR(255) NOT NULL,
-    description TEXT,
-    instructions TEXT,
-    temps_preparation INT, 
-    temps_cuisson INT,
-    portions INT,
-    date_creation TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    utilisateur_id INT,
-    categorie_id INT,
-    FOREIGN KEY (utilisateur_id) REFERENCES utilisateurs(id),
-    FOREIGN KEY (categorie_id) REFERENCES categories(id)
-);
-
-CREATE TABLE recettes_ingredients (
-    recette_id INT,
-    ingredient_id INT,
-    quantite VARCHAR(50), 
-    PRIMARY KEY (recette_id, ingredient_id),
-    FOREIGN KEY (recette_id) REFERENCES recettes(id),
-    FOREIGN KEY (ingredient_id) REFERENCES ingredients(id)
-);
-
-CREATE TABLE favoris (
-    utilisateur_id INT,
-    recette_id INT,
-    PRIMARY KEY (utilisateur_id, recette_id),
-    FOREIGN KEY (utilisateur_id) REFERENCES utilisateurs(id),
-    FOREIGN KEY (recette_id) REFERENCES recettes(id)
-);
-
-CREATE TABLE suivis (
-    utilisateur_id INT, 
-    chef_id INT,        
-    PRIMARY KEY (utilisateur_id, chef_id),
-    FOREIGN KEY (utilisateur_id) REFERENCES utilisateurs(id),
-    FOREIGN KEY (chef_id) REFERENCES utilisateurs(id)
-);
-
-CREATE TABLE likes (
-    utilisateur_id INT,
-    recette_id INT,
-    PRIMARY KEY (utilisateur_id, recette_id),
-    FOREIGN KEY (utilisateur_id) REFERENCES utilisateurs(id),
-    FOREIGN KEY (recette_id) REFERENCES recettes(id)
-);
-
-CREATE TABLE commentaires (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    utilisateur_id INT,
-    recette_id INT,
-    commentaire TEXT,
-    date_commentaire TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (utilisateur_id) REFERENCES utilisateurs(id),
-    FOREIGN KEY (recette_id) REFERENCES recettes(id)
-);
-
+-- -- Insertion de quelques catégories de base (Exemple)
+-- INSERT INTO categories (nom_categorie) VALUES
+-- ('Entrée'), ('Plat principal'), ('Dessert'), ('Boisson'), ('Accompagnement');
 

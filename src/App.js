@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Bienvenue from './components/BienvenuPages/Bienvenue';
-import Tables from './Tables';
 import PhoneNav from './components/NavBar/PhoneNav';
 const App = () => {
     
