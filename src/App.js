@@ -1,19 +1,23 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+/*import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Bienvenue from './components/BienvenuPages/Bienvenue';
 import Tables from './Tables';
-import PhoneNav from './components/NavBar/PhoneNav';
+import PhoneNav from './components/NavBar/PhoneNav';*/
+import Acceuil from './components/Acceuil/acceuil';
 const App = () => {
     
 
     return (
-        <Router>
+       /* <Router>
             <Routes>
-                {/* <Route path="/" element={<Onboarding/>} /> */}
+                {/* <Route path="/" element={<Onboarding/>} /> }
                 <Route path="/" element={<PhoneNav/>} />
-                {/* <Route path="/" element={<Tables/>} /> */}
+                {/* <Route path="/" element={<Tables/>} /> }
             </Routes>
-        </Router>
+        </Router>*/
+        <div>
+            <Acceuil/>
+        </div>
     );
 };
 
