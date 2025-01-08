@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import style from '../../assest/css/PhoneNav/PhoneNav.module.css';
 import { GrHomeRounded } from "react-icons/gr";
 import { FaMagnifyingGlass } from "react-icons/fa6";
