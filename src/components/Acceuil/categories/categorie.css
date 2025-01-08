@@ -1,0 +1,73 @@
+/* Swiper container */
+.swiper {
+    width: 100%;
+    padding: 20px 0;
+  }
+  
+  .categories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 15px; /* Space between categories */
+    justify-content: center; /* Center content horizontally */
+  }
+  
+  .category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px; /* Adjust width for better responsiveness */
+    padding: 10px;
+    border-radius: 10px;
+    border: #bec5c5 1px solid;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .category:hover {
+    background-color: #45a049;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+  }
+  
+  /* Active/Pressed effect */
+  .category:active {
+    background-color: #3e8e41;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+  }
+  
+  .category p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .categories {
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    .category {
+      width: 60px; /* Adjust width on mobile */
+      padding: 8px; /* Reduce padding on mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .categories {
+      flex-direction: column; /* Stack categories vertically on small screens */
+      align-items: center;
+    }
+  
+    .category {
+      width: 80%; /* Make categories take up more width on small screens */
+      padding: 12px; /* Adjust padding for mobile view */
+    }
+  }
+  
