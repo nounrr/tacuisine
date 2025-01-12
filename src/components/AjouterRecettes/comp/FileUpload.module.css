@@ -1,0 +1,179 @@
+
+  .wrapper {
+    margin: auto;
+    /* border: #b91c1c solid 2px; */
+    width: 80%;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+  }
+  
+  .title {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #3E5481;
+  }
+  
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1;
+  }
+  
+ 
+  
+  .dropZone {
+    border: 2px dashed #D0DBEA;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 12px;
+  }
+  
+  .uploadIcon {
+    width: 5rem;
+    height: 5rem;
+    color: #9FA5C0;
+  }
+  
+  .info_text {
+    font-size: 12px;
+    font-weight: 300;
+    margin: 0;
+    color: #9FA5C0;
+  }
+  
+  .uploadButton {
+    color: #3E5481;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  
+  .hiddenInput {
+    display: none;
+  }
+  
+  .uploadedFiles {
+    border: 2px solid #d1d5db;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    max-height: 23rem;
+    overflow-y: auto;
+  }
+  
+  .emptyMessage {
+    text-align: center;
+    color: #6b7280;
+    font-weight: 400;
+    font-size: 13px;
+  }
+  
+  .fileList {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .fileItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .fileInfo {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .fileName {
+    color: #6b7280;
+    font-weight: 400;
+    font-size: 13px;
+  }
+  
+
+  
+  .errorMessage {
+    color: #ef4444;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .wrapper {
+    margin-bottom: 20px;
+  }
+  
+  .uploadButton {
+    margin: 10px 0;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .hiddenInput {
+    display: none;
+  }
+  
+  .preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .thumbnail {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .imagePreview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .videoPreview {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .removeButton {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  
+  .removeButton:hover {
+    background: red;
+  }
+  
+  
+  
+  

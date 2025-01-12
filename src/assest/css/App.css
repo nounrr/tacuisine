@@ -19,7 +19,7 @@ p{
   font-family: 'Ubuntu'
 }
 
-.btn_primary, button{
+.btn_primary{
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -36,7 +36,7 @@ p{
 
 
 }
-.btn_primary:hover ,button:hover{
+.btn_primary:hover {
   background-color: #6b8e23;
   border: 1px solid #6b8e23;
   scale: 1.1;
