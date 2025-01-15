@@ -10,7 +10,6 @@ function Header() {
         </div>
         <div className="notification">
           <span className="bell-icon">🔔</span>
-          <span className="notification-dot"></span>
         </div>
       </div>
       <div className="search-bar">

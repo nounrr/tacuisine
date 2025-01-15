@@ -2,8 +2,6 @@
 
   
   .header {
-    padding: 20px;
-    height: 250px;
     margin: 0;
     font-family: Arial, sans-serif;
     color: white;
@@ -11,7 +9,7 @@
   
   .header-top {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
   }
   
@@ -55,18 +53,22 @@
   }
   
   .search-bar {
-    margin: 20px 0;
+    margin-left: -2px ;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;     /* Vertical centering */
+   
   }
   
   .search-bar input {
-      width: 100%; /* Full width */
+      width: 80%; /* Full width */
       padding: 12px 20px; /* Vertical and horizontal padding */
       margin:10px 0; /* Vertical margin */
       border: 1px solid #ccc; /* Light gray border */
       border-radius: 8px; /* Rounded corners */
       font-size: 16px; /* Font size */
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-
+    
   }
   
   input:focus {
