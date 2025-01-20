@@ -1,0 +1,79 @@
+.navBar{
+  position: absolute;
+  bottom: 0;
+    width: 100%;
+    display: flex;
+    height: 70px;
+
+}
+.left {
+    mask:
+      right calc(var(--s) + var(--r)) top 0 var(--_m),
+      right calc(var(--s) + var(--r)) var(--_m),
+      radial-gradient(var(--s) at 100% 0,#0000 99%,#000 101%) 
+       calc(-1*var(--r)) var(--r) no-repeat,
+      conic-gradient(at calc(100% - var(--s) - 2*var(--r)) calc(var(--s) + 1*var(--r)),
+       #0000 25%,#000 0);
+  }
+.right{
+    mask:
+    calc(var(--s) + var(--r)) 0 var(--_m),
+    0 calc(var(--s) + var(--r)) var(--_m),
+    radial-gradient(var(--s) at 0 0,#0000 99%,#000 101%) 
+     var(--r) var(--r) no-repeat,
+    conic-gradient(at calc(var(--s) + 2*var(--r)) calc(var(--s) + 1*var(--r)),
+     #000 75%,#0000 0);
+
+    justify-content: end;
+}
+.navDiv{
+
+flex: 1;
+background-color: rgb(255, 255, 255);
+--r: 5px; /* the radius */
+  --s: 30px; /* the size of the corner*/
+  --_m:/calc(2*var(--r)) calc(2*var(--r))
+  radial-gradient(#000 62%,#0000 75%) no-repeat;
+  align-items: center;
+  display: flex;
+}
+.icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85% ;
+
+}
+.right .icons{
+justify-self: end;
+
+}
+
+.icon{
+  color: #97A2B0;
+  flex: 1;
+  font-size: 28px;
+}
+.icon_active{
+  color: gold;
+  fill: gold;
+
+}
+.cercle{
+  background-color: gold;
+  border-radius: 50%;
+  width: fit-content;
+  position: absolute;
+  bottom: 40px;
+  position-area: bottom;
+  box-shadow: 0px 0px 9px 6px rgb(0 0 0 / 15%);
+    
+}
+.cercle .icon{
+  padding: 15px;
+  color: #6B8E23;
+
+}
+.profileçinfo{
+
+}
