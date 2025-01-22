@@ -12,7 +12,7 @@ const Categories = [
 ];
 const recipes = [
     {
-      title: "Easy Homemade Beef Burger",
+      title: " Beef Burger",
       type: "Fast Food",
       owner: "James Spader",
       imageUrl: "https://via.placeholder.com/100", // Replace with actual URLs if needed
@@ -36,6 +36,13 @@ const recipes = [
       title: "Chicken Curry",
       type: "Indian",
       owner: "Raj Patel",
+      imageUrl: "https://via.placeholder.com/100",
+      authorImage: "https://via.placeholder.com/30",
+    },
+    {
+      title: "Sushi Platter",
+      type: "Japanese",
+      owner: "Hiro Tanaka",
       imageUrl: "https://via.placeholder.com/100",
       authorImage: "https://via.placeholder.com/30",
     },
