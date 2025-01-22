@@ -25,6 +25,7 @@
   border-radius: 10px;
   background-color: #ffffff;
   display: inline-block;
+  padding: 10px;
 
 }
   
@@ -35,11 +36,15 @@
   }
   
   .notification {
-    position: relative;
+   
+  padding: 10px;
+
   }
   
   .bell-icon {
     font-size: 24px;
+    color:#ffc107;
+  
   }
   
   .notification-dot {
