@@ -107,11 +107,6 @@
     text-align: center;
     margin-top: 1rem;
   }
-  
-  .wrapper {
-    margin-bottom: 20px;
-  }
-  
   .uploadButton {
     margin: 10px 0;
     padding: 10px 20px;
@@ -121,7 +116,6 @@
   .hiddenInput {
     display: none;
   }
-  
   .preview {
     display: flex;
     flex-wrap: wrap;

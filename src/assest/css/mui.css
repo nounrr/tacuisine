@@ -23,3 +23,76 @@
 .input-field .MuiOutlinedInput-root.Mui-focused fieldset {
   border-color: #6b8e23; /* Bordure lorsqu'il est focus */
 }
+ /* slider page add recetee 2 */
+
+ .customSlider .MuiSlider-root {
+  color: #FFD700;
+  width: 95%;
+  height: 8px;
+}
+
+.customSlider .MuiSlider-track {
+  background-color: #FFD700;
+  /* Même épaisseur que la rail */
+  height: 8px;
+  /* Un border plus visible */
+  border: 2px solid #FFD700;
+  /* Coins arrondis */
+  border-radius: 4px;
+}
+
+.customSlider .MuiSlider-thumb {
+  height: 24px;
+  width: 24px;
+  background-color: #FFD700;
+  
+}
+.customSlider .MuiSlider-rail {
+  /* Épaisseur */
+  height: 8px;
+  /* Optionnel : un border plus "visible" */
+  border: 2px solid #FFD700;
+  /* Coins arrondis */
+}
+
+/* États focus, hover, etc. du pouce */
+.customSlider .MuiSlider-thumb:focus,
+.customSlider .MuiSlider-thumb:hover,
+.customSlider .MuiSlider-thumb.Mui-active,
+.customSlider .MuiSlider-thumb.Mui-focusVisible {
+  box-shadow: inherit;
+}
+
+/* Personnalisation du label de la valeur (bulle) */
+.customSlider .MuiSlider-valueLabel {
+  line-height: 1.2;
+  font-size: 12px;
+  background: unset;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50% 50% 50% 0;
+  background-color: #6b8e23;
+  transform-origin: bottom left;
+  transform: translate(50%, -100%) rotate(-45deg) scale(0);
+}
+
+.customSlider .MuiSlider-valueLabel::before {
+  display: none;
+}
+
+.customSlider .MuiSlider-valueLabel.MuiSlider-valueLabelOpen {
+  transform: translate(50%, -100%) rotate(-45deg) scale(1);
+}
+
+.customSlider .MuiSlider-valueLabel > * {
+  transform: rotate(45deg);
+}
+
+.customSlider .MuiSlider-markLabel{
+  color: #FFD700;
+  top: -15px;
+  font-weight: 600;
+  font-size: 15px;
+  font-family: 'ubuntu';
+}

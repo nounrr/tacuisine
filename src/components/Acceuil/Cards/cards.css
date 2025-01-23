@@ -88,7 +88,7 @@
   .arrow-button {
     background-color: #ffc107;
     border: none;
-    border-radius: 50%;
+    border-radius:20px;
     color: #fff;
     font-size: 16px;
     width: 32px;
