@@ -4,7 +4,9 @@
 padding:0}
 =======
 *{
-  font-family: 'Ubuntu'
+  font-family: 'Ubuntu';
+  margin: 0;
+  padding: 0;
 
 }
 >>>>>>> 43cc0da28232116712cfb23ec831642462bc7834
@@ -12,13 +14,23 @@ body{
   overflow-x: hidden;
   background-color: #fefdff;
 }
+.content{
+  width: 90%;
+  /* border: blue solid 1px; */
+  margin: auto;
+}
 .flex{
   display: flex;
 }
-h1{
-  color: #6b8e23;
-  font-family: 'Ubuntu'
-  /* color: #gold; */
+.title{
+  font-size: 20px;
+  margin-bottom:15px;
+}
+.title span{
+  font-weight: 300;
+}
+.blue{
+  color:#3E5481
 }
 p{
   font-family: 'Ubuntu'
@@ -30,11 +42,11 @@ p{
   align-items: center;
   gap: 10px;
   font-family: 'Ubuntu';
-  font-weight: 600;
+  font-weight: 600; 
   background-color: gold;
   border:  none;
   padding: 8px 16px;
-  border-radius: 30px;
+  border-radius: 10px;
   color: #6b8e23;
   cursor: pointer;
   transition-duration: 0.3s;
@@ -59,6 +71,5 @@ p{
   background-color: transparent;
   color: #6b8e23 ;
   scale: 1
-  
+  }
 
-}
