@@ -64,7 +64,7 @@ export default function Bienvenue() {
         nextButton={
           //si la derniere page hide button suivante
           activeStep !== maxSteps - 1 ? 
-           <button
+           <button className='btn_primary'
           onClick={handleNext}
           disabled={activeStep === maxSteps - 1}
         >
@@ -80,7 +80,7 @@ export default function Bienvenue() {
 
         }
         backButton={
-          <button size="small" onClick={handleBack} disabled={activeStep === 0}>
+          <button className='btn_primary' size="small" onClick={handleBack} disabled={activeStep === 0}>
             {theme.direction === 'rtl' ? (
               <KeyboardArrowRight />
             ) : (

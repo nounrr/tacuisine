@@ -13,7 +13,7 @@ import { PiChefHatLight } from "react-icons/pi";
 const PhoneNav = () => {
     
 
-    return (<>
+    return (<div className={style.menu}>
        <nav className={style.navBar}>
           <div className={`${style.left} ${style.navDiv}`}>
           
@@ -37,7 +37,7 @@ const PhoneNav = () => {
        <PiChefHatLight className={style.icon} />
 
        </div>
-       </>
+       </div>
     );
 };
 

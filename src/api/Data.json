@@ -1,0 +1,108 @@
+{
+    "utilisateurs": [
+      {
+        "id": 1,
+        "nom_utilisateur": "alice2023",
+        "email": "alice@example.com",
+        "mot_de_passe": "hashed_password_123",
+        "sexe": "Femme",
+        "photo_profil": "https://example.com/images/alice.jpg"
+      },
+      {
+        "id": 2,
+        "nom_utilisateur": "bob_cuisinier",
+        "email": "bob@example.com",
+        "mot_de_passe": "hashed_password_456",
+        "sexe": "Homme",
+        "photo_profil": "https://example.com/images/bob.jpg"
+      }
+    ],
+        "recettes": [
+      {
+        "id": 1,
+        "titre": "Gâteau au chocolat",
+        "description": "Un délicieux gâteau au chocolat fondant.",
+        "instructions": [
+          {
+            "id": 1,
+            "texte": "Mélangez la farine et le sucre.",
+            "image": "https://example.com/images/instructions/step1.jpg"
+          },
+          {
+            "id": 2,
+            "texte": "Ajoutez les œufs et le beurre fondu.",
+            "image": "https://example.com/images/instructions/step2.jpg"
+          },
+          {
+            "id": 3,
+            "texte": "Versez le mélange dans un moule beurré.",
+            "image": "https://example.com/images/instructions/step3.jpg"
+          },
+          {
+            "id": 4,
+            "texte": "Faites cuire au four à 180°C pendant 30 minutes.",
+            "image": "https://example.com/images/instructions/step4.jpg"
+          }
+        ],
+        "ingredients": [
+          { "nom": "Farine", "quantite": "200g" },
+          { "nom": "Sucre", "quantite": "150g" },
+          { "nom": "Œufs", "quantite": "3" },
+          { "nom": "Beurre", "quantite": "100g" }
+        ],
+        "temps_preparation": 20,
+        "nom_categorie": "Desserts",
+        "utilisateur_id": "bob_cuisinier",
+        "video_instructions": "https://example.com/videos/gateau_au_chocolat.mp4",
+        "images_resultat": [
+          "https://example.com/images/results/gateau1.jpg",
+          "https://example.com/images/results/gateau2.jpg"
+        ]
+      },
+      {
+        "id": 2,
+        "titre": "Salade César",
+        "description": "Une salade fraîche et croquante.",
+        "instructions": [
+          {
+            "id": 1,
+            "texte": "Préparez les feuilles de laitue.",
+            "image": "https://example.com/images/instructions/salade_step1.jpg"
+          },
+          {
+            "id": 2,
+            "texte": "Ajoutez les croûtons et le fromage râpé.",
+            "image": "https://example.com/images/instructions/salade_step2.jpg"
+          },
+          {
+            "id": 3,
+            "texte": "Versez la sauce César sur la salade.",
+            "image": "https://example.com/images/instructions/salade_step3.jpg"
+          }
+        ],
+        "ingredients": [
+          { "nom": "Laitue", "quantite": "1 tête" },
+          { "nom": "Croûtons", "quantite": "50g" },
+          { "nom": "Fromage râpé", "quantite": "30g" },
+          { "nom": "Sauce César", "quantite": "100ml" }
+        ],
+        "temps_preparation": 15,
+        "nom_categorie": "Entrées",
+        "utilisateur_id": "alice2023",
+        "video_instructions": "https://example.com/videos/salade_cesar.mp4",
+        "images_resultat": [
+          "https://example.com/images/results/salade1.jpg",
+          "https://example.com/images/results/salade2.jpg"
+        ]
+      }
+    ],
+    "favoris": [
+      { "utilisateur_id": 1, "recette_id": 2 },
+      { "utilisateur_id": 2, "recette_id": 1 }
+    ],
+    "likes": [
+      { "utilisateur_id": 1, "recette_id": 1 },
+      { "utilisateur_id": 2, "recette_id": 2 }
+    ]
+  }
+  

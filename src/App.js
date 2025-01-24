@@ -1,28 +1,29 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Bienvenue from './components/BienvenuPages/Bienvenue';
-/*import Tables from './Tables';*/
+// import Acceuil from './components/Acceuil/acceuil';
+import Detail from './components/Detail/Detail';
+import './assest/css/App.css';
 import PhoneNav from './components/NavBar/PhoneNav';
-import Acceuil from './components/Acceuil/acceuil';
-import UploadFile from './components/AjouterRecettes/comp/UploadFile';
-import Page1 from './components/AjouterRecettes/Pages/Page1';
-import Modal from './components/filter/Modal';
+import ProfilePage from './components/ProfilePages/ProfilePage';
 const App = () => {
     
 
     return (
-       /* <Router>
+        <>
+    <PhoneNav/>
+
+    <Router>
             <Routes>
                   
-                <Route path="/" element={<Page1/>} />
+                {/* <Route path="/" element={<Bienvenue/>} /> */}
+                <Route path="/" element={<ProfilePage/>} />
+                {/* <Route path="/deatail/:id" element={<Detail/>} /> */}
                 
             </Routes>
-
-            <Acceuil/>
             
-        </Router>*/
-        <><Modal/></>
-        
+    </Router>
+    </>
     );
 };
 

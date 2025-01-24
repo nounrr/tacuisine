@@ -1,15 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-<<<<<<< HEAD
 *{margin :0;
 padding:0}
-=======
 *{
   font-family: 'Ubuntu';
   margin: 0;
   padding: 0;
 
 }
->>>>>>> 43cc0da28232116712cfb23ec831642462bc7834
 body{
   overflow-x: hidden;
   background-color: #fefdff;
@@ -31,6 +28,9 @@ body{
 }
 .blue{
   color:#3E5481
+}
+.green{
+  color:#6b8e23;
 }
 p{
   font-family: 'Ubuntu'
@@ -73,3 +73,54 @@ p{
   scale: 1
   }
 
+
+
+
+  /* category btn  */
+.category {
+  display: flex;
+  flex-direction: row;
+  padding: 7px 15px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+  
+  .category:hover {
+    background-color: #6B8E23;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    color: white;
+  }
+  .category_active{background-color: #6B8E23;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    color: white;
+    transform: translateY(1px);}
+  .category:active {
+    background-color: #6B8E23;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    transform: translateY(1px);
+    
+  }
+  
+  .category div {
+    font-size: 15px;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .categories {
+      justify-content: center;
+      gap: 10px;
+    }
+  
+  }
+  
+  @media (max-width: 480px) {
+    .categories {
+      flex-direction: column; /* Stack categories vertically on small screens */
+      align-items: center;
+    }
+  }

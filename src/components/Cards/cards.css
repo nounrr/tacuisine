@@ -17,10 +17,11 @@
   align-items: center;    
   gap: 20px;              
   margin: 0 auto;
-  padding: 20px;
-  margin-top: 50px;
 }
-
+.arrow_icon{
+  text-decoration: none;
+  color:#6b8e23 ;
+}
 .card-image {
   width: 80px; 
   height: 80px;
@@ -78,7 +79,7 @@
 .arrow-button {
   background-color: #ffc107;
   border: none;
-  border-radius: 50%;
+  border-radius: 10px;
   color: #fff;
   font-size: 16px;
   width: 32px;
@@ -101,7 +102,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
   }
 
   .card-image {

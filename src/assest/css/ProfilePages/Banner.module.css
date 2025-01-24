@@ -7,6 +7,7 @@
     background-size: cover;
     position: relative;
     border-radius: 25px;
+    margin-top: 20px;
 }
 .overlay{
     background: linear-gradient(
@@ -33,7 +34,7 @@ border-radius: 25px;
     color: white;
     font-size: 26px;
     margin-top: 10px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     font-weight: 500;
 }
 .profile_info img{

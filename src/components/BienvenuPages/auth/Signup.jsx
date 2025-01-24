@@ -45,11 +45,11 @@ const SignUp = ({ setIsSignup }) => {
           />
         </FormControl>
       </Box>
-      <button className="aut__hbtn">Se connecter</button>
+      <button className="aut__hbtn btn_primary">Se connecter</button>
       <div className={`${style.signup_mdp_newAccount} flex` }>
       <h5   onClick={() => setIsSignup(false)}>
         Pas encore inscrit ? Créez un compte.
-      </h5>
+      </h5><br />
       <h5  >Mot de passe oublié</h5>
       </div>
     </>
