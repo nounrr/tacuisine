@@ -3,6 +3,7 @@ import React,{ useState } from "react";
 import Recips from "./Cards/card";
 import Categorie from "./categories/categories";
 import Header from "./Header/Header";
+import PhoneNav from "../NavBar/PhoneNav";
 const Categories = [
     { title: "Breakfast", emoji: "🥞", active: true },
     { title: "Lunch", emoji: "🍔", active: false },
@@ -63,7 +64,7 @@ function Acceuil(){
           <Header/>
           < Categorie categories={categories}/>
           <Recips recipes={recipe} />
-          
+           <PhoneNav/>
         </>
     )
 }

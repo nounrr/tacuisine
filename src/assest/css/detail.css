@@ -66,6 +66,7 @@ hr {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    
 
   }
    
@@ -85,4 +86,68 @@ hr {
   .Type{
     margin-top: -100px;
   }   
-  
+  /*steps css*/
+
+  /* Container styles */
+.steps-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Title styling */
+.steps-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #24324f;
+  margin-bottom: 15px;
+}
+
+/* Individual step item */
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Step number circle */
+.step-number {
+  width: 30px;
+  height: 30px;
+  background-color: #24324f;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Step description */
+.step-description {
+  font-size: 14px;
+  color: #24324f;
+  line-height: 1.5;
+  margin-top: 5px;
+}
+
+/* Image styling */
+.step-image {
+  width: 65%;
+  border-radius: 10px;
+  object-fit: cover;
+ 
+}
+.img{
+  display: flex;
+  justify-content: center;
+}
+.step-index{
+  display: flex;
+  align-items: center; /* Vertically center-align the content */
+  justify-content: flex-start;
+  padding: 5px;
+  gap:10px
+}

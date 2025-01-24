@@ -1,10 +1,14 @@
-import React from "react";
+import {React} from "react";
+import { Link } from "react-router";
 import "./cards.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
+
 const Recips = ({ recipes }) => {
+
   return (
+    <>
     <div className="List">
       {recipes.map((recette, index) => (
         <div className="card" key={index}>
@@ -27,13 +31,16 @@ const Recips = ({ recipes }) => {
             <div className="heart-icon">
               <FontAwesomeIcon icon={faHeart} />
             </div>
+            <Link to="/detail">
             <button className="arrow-button">
               <FontAwesomeIcon icon={faArrowRight} />
-            </button>
+            </button></Link>
+           
           </div>
         </div>
       ))}
     </div>
+    </>
   );
 };
 
