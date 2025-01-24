@@ -1,15 +1,18 @@
+<<<<<<< HEAD
 .menu{
   bottom: 0;
   position: fixed;
   width: 100%;
 }
+=======
+>>>>>>> e341ee47c4eb3628ab32d45eec66c4732f11bd3b
 
 .navBar{
-  position: absolute;
+  position: fixed;
   bottom: 0;
-    width: 100%;
-    display: flex;
-    height: 70px;
+  width: 100%;
+  display: flex;
+  height: 70px;
 
 }
 .left {
@@ -69,7 +72,7 @@ justify-self: end;
   background-color: gold;
   border-radius: 50%;
   width: fit-content;
-  position: absolute;
+  position: fixed;
   bottom: 40px;
   position-area: bottom;
   box-shadow: 0px 0px 9px 6px rgb(0 0 0 / 15%);

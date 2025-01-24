@@ -17,10 +17,13 @@
     z-index: 1000;
     padding: 20px;
     border-radius: 20px;
-    
-    
-      /* Centers vertically */
-     
+      
+  }
+  @media (max-width: 768px) {
+    .drawer {
+      width: 90%; 
+      transform: rotate(0deg); 
+    }
   }
   
   /* When the drawer is open, slide it up into view */

@@ -1,0 +1,74 @@
+  /*swiper*/
+  .carousel{
+    overflow: hidden;
+    cursor: grab;
+    display: flex;
+    justify-content: center;
+ 
+}
+.innercarousel{
+    display: flex ;
+}
+.item{
+  min-height: 5rem;
+  min-width: 5rem;
+  padding: 20px;
+
+}
+  .category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+   }
+  
+  /* Hover effect */
+  .category:hover {
+    background-color: #45a049;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+  }
+  
+  /* Active/Pressed effect */
+  .category:active {
+    background-color: #3e8e41;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+  }
+  
+  .category div {
+    margin: 5px 0 0;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .categories {
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    .category {
+      width: 60px; /* Adjust width on mobile */
+      padding: 8px; /* Reduce padding on mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .categories {
+      flex-direction: column; /* Stack categories vertically on small screens */
+      align-items: center;
+    }
+  
+    .category {
+      width: 80%; /* Make categories take up more width on small screens */
+      padding: 12px; /* Adjust padding for mobile view */
+    }
+  }
+  
