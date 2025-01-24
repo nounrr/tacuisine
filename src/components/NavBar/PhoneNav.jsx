@@ -13,13 +13,9 @@ import { PiChefHatLight } from "react-icons/pi";
 const PhoneNav = () => {
     
 
-<<<<<<< HEAD
     return (<div className={style.menu}>
        <nav className={style.navBar}>
-=======
-    return (<>
-      <nav className={style.navBar}>
->>>>>>> e341ee47c4eb3628ab32d45eec66c4732f11bd3b
+    
           <div className={`${style.left} ${style.navDiv}`}>
           
           <div className={style.icons}>
@@ -42,12 +38,8 @@ const PhoneNav = () => {
        <PiChefHatLight className={style.icon} />
 
        </div>
-<<<<<<< HEAD
        </div>
-=======
        
-       </>
->>>>>>> e341ee47c4eb3628ab32d45eec66c4732f11bd3b
     );
 };
 
