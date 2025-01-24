@@ -6,22 +6,19 @@ import PhoneNav from './components/NavBar/PhoneNav';
 import Acceuil from './components/Acceuil/acceuil';
 import UploadFile from './components/AjouterRecettes/comp/UploadFile';
 import Page1 from './components/AjouterRecettes/Pages/Page1';
-import Modal from './components/filter/Modal';
+import Modal from './components/filter/drawer';
+import Detail from './components/Detail/detail';
 const App = () => {
     
 
     return (
-       /* <Router>
+       <><Router>
+            <Acceuil/>    
             <Routes>
-                  
-                <Route path="/" element={<Page1/>} />
-                
-            </Routes>
-
-            <Acceuil/>
-            
-        </Router>*/
-        <><Modal/></>
+                <Route path="/detail" element={<Detail/>} />
+            </Routes>        
+        </Router>
+        </>
         
     );
 };

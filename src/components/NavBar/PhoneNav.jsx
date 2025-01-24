@@ -14,7 +14,7 @@ const PhoneNav = () => {
     
 
     return (<>
-       <nav className={style.navBar}>
+      <nav className={style.navBar}>
           <div className={`${style.left} ${style.navDiv}`}>
           
           <div className={style.icons}>
@@ -37,6 +37,7 @@ const PhoneNav = () => {
        <PiChefHatLight className={style.icon} />
 
        </div>
+       
        </>
     );
 };
