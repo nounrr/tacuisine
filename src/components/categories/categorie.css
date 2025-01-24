@@ -1,0 +1,17 @@
+  /*swiper*/
+  .carousel{
+    overflow: hidden;
+    cursor: grab;
+ 
+}
+.innercarousel{
+    display: flex ;
+}
+.item {
+  padding-right: 20px;
+  margin-bottom: 20px;
+  display: flex
+;
+  justify-content: center;
+}
+  
