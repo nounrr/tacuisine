@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Bienvenue from './components/BienvenuPages/Bienvenue';
-// import Acceuil from './components/Acceuil/acceuil';
+import Acceuil from './components/Acceuil/acceuil';
 import Detail from './components/Detail/Detail';
 import './assest/css/App.css';
 import PhoneNav from './components/NavBar/PhoneNav';
