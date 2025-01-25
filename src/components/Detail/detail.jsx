@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import { FaCheck } from "react-icons/fa6";
+import { FaCheck,FaHeart } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import style from "../../assest/css/detail.module.css"; 
 import im1 from "./exemp/im1.jpg";
 import im2 from "./exemp/im2.jpg";
 import im3 from "./exemp/im3.jpg";
 import im4 from "./exemp/im4.jpg";
-import { FaHeart } from "react-icons/fa6";
 
 
 function Detail() {

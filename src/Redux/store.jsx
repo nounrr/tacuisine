@@ -1,7 +1,7 @@
 // src/store.js
 
 import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import {thunk} from 'redux-thunk';
 import utilisateursReducer from './ReduxUtilisateur/reducerUser';
 import recettesReducer from './ReduxRcette/reduerRecette';
 import likesReducer from './ReduxLikes/reducerLikes';

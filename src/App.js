@@ -6,6 +6,7 @@ import Detail from './components/Detail/Detail';
 import './assest/css/App.css';
 import PhoneNav from './components/NavBar/PhoneNav';
 import ProfilePage from './components/ProfilePages/ProfilePage';
+
 const App = () => {
     
 
@@ -24,6 +25,7 @@ const App = () => {
             
     </Router>
     </>
+      
     );
 };
 
