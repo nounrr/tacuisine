@@ -1,6 +1,5 @@
 import React from 'react'
 import style from '../../../assest/css/AjouterRecettes/AjouterRecettes.module.css';
-import { Link } from 'react-router';
 
 function UploadSucces() {
   return (
@@ -10,7 +9,6 @@ function UploadSucces() {
         <h1 className='title blue'>Upload Success</h1>
         <p>Votre recette a été ajoutée,
         vous pouvez la voir sur votre profil.</p>
-        <Link className="btn_primary">Retour à l'accueil</Link>
      </div>
     </div>
   )

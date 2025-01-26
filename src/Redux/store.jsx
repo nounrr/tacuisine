@@ -1,22 +1,28 @@
-// src/store.js
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import { persistStore, persistReducer } from 'redux-persist';
+import authSlice from './authSlice';
+import recettesSlice from './recettesSlice';
+import userReducer from './userSlice';
+import favorisSlice from './favorisSlice';
+import storage from 'redux-persist/lib/storage';
 
-import { createStore, applyMiddleware } from 'redux';
-import {thunk} from 'redux-thunk';
-import utilisateursReducer from './ReduxUtilisateur/reducerUser';
-import recettesReducer from './ReduxRcette/reduerRecette';
-import likesReducer from './ReduxLikes/reducerLikes';
-import suivisReducer from './ReduxFollowers/reducerFollowers';
-import favorisReducer from './ReduxFavoris/reducerFavoris';
-import { combineReducers } from 'redux';
+const persistConfig = {
+  key: 'root',
+  storage,
+  whitelist: ['auth', 'users', 'recettes',"favoris"],
+};
 
 const rootReducer = combineReducers({
-  user: utilisateursReducer,
-  recette: recettesReducer,
-  likes: likesReducer,
-  suivs: suivisReducer,
-  favoris: favorisReducer,
+  auth: authSlice,
+  recettes: recettesSlice,
+  users: userReducer,
+  favoris: favorisSlice,
 });
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
+const store = configureStore({
+  reducer: persistedReducer,
+});
 export default store;
+export const persistor = persistStore(store);

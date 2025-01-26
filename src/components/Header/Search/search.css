@@ -1,0 +1,10 @@
+.arrow-icon{
+  font-size: 34px;  
+  color: #2E3E5C; 
+}
+
+.bar{
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+}

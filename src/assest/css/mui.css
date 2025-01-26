@@ -30,6 +30,12 @@
   width: 95%;
   height: 8px;
 }
+.css-t0trsg {
+    height: fit-content;
+    max-width: 100vw;
+    width: 100%;
+    padding: 0px;
+    overflow: none;}
 
 .customSlider .MuiSlider-track {
   background-color: #FFD700;

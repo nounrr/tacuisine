@@ -1,0 +1,109 @@
+/* Profile Page */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .profile-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .profile-edit-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-form {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  
+  .profile-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .profile-footer button {
+    flex: 1;
+    border: none;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .saveButton {
+    background-color: gold;
+    color: white;
+  }
+  
+  .cancelButton {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .inputGroup label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #3e5481;
+  }
+  
+  .input,
+  .textarea {
+    border: solid 1px #b2b2b2;
+    border-radius: 30px;
+    padding: 16px 10px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .textarea {
+    border-radius: 14px;
+  }
+  
+  .input::placeholder,
+  .textarea::placeholder {
+    color: #9ca1bb;
+  }
+  
+  .profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    background-color: #f2f2f2;
+    object-fit: cover;
+  }
+  
+  .banner {
+    background-color: #3e5481;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+  }
+  

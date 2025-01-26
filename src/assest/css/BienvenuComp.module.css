@@ -47,6 +47,17 @@ img{width: 30%;}
     margin-top: -13px;
 }
 
+.fileInput::file-selector-button {
+    background: #6B8E23;
+    border: 1px solid #e0e0e0;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    color: white;
+  }
+
 @media (min-width: 768px) {
     .block {
         width: 45%;

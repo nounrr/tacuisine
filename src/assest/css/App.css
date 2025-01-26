@@ -15,6 +15,7 @@ body{
   width: 90%;
   /* border: blue solid 1px; */
   margin: auto;
+  margin-bottom: 80px;
 }
 .flex{
   display: flex;

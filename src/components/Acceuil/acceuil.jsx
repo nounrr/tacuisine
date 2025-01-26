@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Categorie from "../categories/categories";
 import Header from "../Header/Header";
 import CardsList from "../Cards/CardsList";
+import { useSelector } from "react-redux";
+
 const Categories = [
   { title: "Breakfast", emoji: "🥞", active: true },
   { title: "Lunch", emoji: "🍔", active: false },
@@ -10,143 +12,41 @@ const Categories = [
   { title: "Desserts", emoji: "🍰", active: false },
 ];
 
-const recipes = [
-  {
-    title: "Beef Burger",
-    type: "Fast Food",
-    owner: "James Spader",
-    imageUrl: "https://via.placeholder.com/100",
-    authorImage: "https://via.placeholder.com/30",
-    id:1,
-  },
-  {
-    title: "Vegan Tacos",
-    type: "Mexican",
-    owner: "Emily Clark",
-    imageUrl: "https://via.placeholder.com/100",
-    authorImage: "https://via.placeholder.com/30",
-    id:2,
-  },
-  {
-    title: "Spaghetti Bolognese",
-    type: "Italian",
-    owner: "Michael Scott",
-    imageUrl: "https://via.placeholder.com/100",
-    authorImage: "https://via.placeholder.com/30",
-    id:3,
-  },
-  {
-    title: "Chicken Curry",
-    type: "Indian",
-    owner: "Raj Patel",
-    imageUrl: "https://via.placeholder.com/100",
-    authorImage: "https://via.placeholder.com/30",
-    id:4,
-  },
-  {
-    title: "Sushi Platter",
-    type: "Japanese",
-    owner: "Hiro Tanaka",
-    imageUrl: "https://via.placeholder.com/100",
-    authorImage: "https://via.placeholder.com/30",
-    id:5,
-  },
-  {
-    title: "Beef Burger",
-    type: "Fast Food",
-    owner: "James Spader",
-    imageUrl: "https://via.placeholder.com/100",
-    authorImage: "https://via.placeholder.com/30",
-    id:1,
-  },
-  {
-    title: "Vegan Tacos",
-    type: "Mexican",
-    owner: "Emily Clark",
-    imageUrl: "https://via.placeholder.com/100",
-    authorImage: "https://via.placeholder.com/30",
-    id:2,
-  },
-  {
-    title: "Spaghetti Bolognese",
-    type: "Italian",
-    owner: "Michael Scott",
-    imageUrl: "https://via.placeholder.com/100",
-    authorImage: "https://via.placeholder.com/30",
-    id:3,
-  },
-  {
-    title: "Chicken Curry",
-    type: "Indian",
-    owner: "Raj Patel",
-    imageUrl: "https://via.placeholder.com/100",
-    authorImage: "https://via.placeholder.com/30",
-    id:4,
-  },
-  {
-    title: "Sushi Platter",
-    type: "Japanese",
-    owner: "Hiro Tanaka",
-    imageUrl: "https://via.placeholder.com/100",
-    authorImage: "https://via.placeholder.com/30",
-    id:5,
-  },
-  {
-    title: "Beef Burger",
-    type: "Fast Food",
-    owner: "James Spader",
-    imageUrl: "https://via.placeholder.com/100",
-    authorImage: "https://via.placeholder.com/30",
-    id:1,
-  },
-  {
-    title: "Vegan Tacos",
-    type: "Mexican",
-    owner: "Emily Clark",
-    imageUrl: "https://via.placeholder.com/100",
-    authorImage: "https://via.placeholder.com/30",
-    id:2,
-  },
-  {
-    title: "Spaghetti Bolognese",
-    type: "Italian",
-    owner: "Michael Scott",
-    imageUrl: "https://via.placeholder.com/100",
-    authorImage: "https://via.placeholder.com/30",
-    id:3,
-  },
-  {
-    title: "Chicken Curry",
-    type: "Indian",
-    owner: "Raj Patel",
-    imageUrl: "https://via.placeholder.com/100",
-    authorImage: "https://via.placeholder.com/30",
-    id:4,
-  },
-  {
-    title: "Sushi Platter",
-    type: "Japanese",
-    owner: "Hiro Tanaka",
-    imageUrl: "https://via.placeholder.com/100",
-    authorImage: "https://via.placeholder.com/30",
-    id:5,
-  },
-];
-
-
-
 function Acceuil() {
-  const [recipe, setRecipe] = useState(recipes);
+  const recettes = useSelector((state) => state.recettes.recettes);
+
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const [categories, setCategories] = useState(Categories);
+
+  const handleCategorySelect = (category) => {
+    if (selectedCategory === category.title) {
+      setSelectedCategory(null);
+      const updatedCategories = categories.map((cat) => ({
+        ...cat,
+        active: false,
+      }));
+      setCategories(updatedCategories);
+    } else {
+      setSelectedCategory(category.title);
+      const updatedCategories = categories.map((cat) => ({
+        ...cat,
+        active: cat.title === category.title,
+      }));
+      setCategories(updatedCategories);
+    }
+  };
+
+  const filteredRecettes = selectedCategory
+    ? recettes.filter((r) => r.nom_categorie === selectedCategory)
+    : recettes;
 
   return (
     <div className="content">
       <Header />
-      {/* <VideoList/> */}
       <h1 className="title green">Catégories</h1>
-      <Categorie categories={categories} />
+      <Categorie categories={categories} onSelect={handleCategorySelect} />
       <h1 className="title green">Recettes</h1>
-      <CardsList recipes={recipe} />
+      <CardsList recipes={filteredRecettes} />
     </div>
   );
 }

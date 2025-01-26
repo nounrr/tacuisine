@@ -1,15 +1,19 @@
 import React from 'react';
 import './header.css'; 
 import TopBar from './TopBar';
+import SearchInput from './SearchInput';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+
+  const navigate = useNavigate();
+
   return (
     <header className="header">  
       <TopBar />
-      <div className="search-bar">
-        <input type="text" placeholder="Search...." />
+      <div onClick={()=>navigate("/search")}>
+      <SearchInput  />
       </div>
-      
     </header>
   );
 }

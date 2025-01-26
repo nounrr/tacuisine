@@ -3,49 +3,64 @@ import UploadFile from "../comp/UploadFile";
 import { MdOutlineSlowMotionVideo } from "react-icons/md";
 import { FaRegImage, FaRegImages } from "react-icons/fa6";
 
-function Page1() {
-  const [video, setVideo] = useState([]);
-  const [image, setImage] = useState([]);
+function Page1({ newRecette, setNewRecette }) {
+  const [video, setVideo] = useState(null);
+  const [cover, setCover] = useState(null);
   const [gallery, setGallery] = useState([]);
 
   const handleVideoUpload = (files) => {
-    setVideo(files.slice(0, 1)); // Only 1 video
+    const file = files[0];
+    const videoUrl = URL.createObjectURL(file);
+    setVideo(videoUrl);
+    setNewRecette({ ...newRecette, video_instructions: videoUrl });
   };
 
   const handleImageUpload = (files) => {
-    setImage(files.slice(0, 1)); // Only 1 image
+    const file = files[0];
+    const imageUrl = URL.createObjectURL(file); 
+    setCover(imageUrl);
+    setNewRecette({ ...newRecette, cover: imageUrl });
   };
 
   const handleGalleryUpload = (files) => {
-    setGallery(files.slice(0, 10)); // Max 10 images
+    const galleryUrls = Array.from(files).map((file) =>
+      URL.createObjectURL(file) 
+    );
+    setGallery(galleryUrls);
+    setNewRecette({ ...newRecette, images_resultat: galleryUrls });
   };
 
   return (
     <div>
       <UploadFile
-        title={"Video"}
+        title="Vidéo"
         iconComp={<MdOutlineSlowMotionVideo />}
         onUpload={handleVideoUpload}
         limit={1}
         accept="video/*"
         isGallery={false}
       />
+     
+
       <UploadFile
-        title={"Image Cover"}
+        title="Image de couverture"
         iconComp={<FaRegImage />}
         onUpload={handleImageUpload}
         limit={1}
         accept="image/*"
         isGallery={false}
       />
+     
+
       <UploadFile
-        title={"Gallery"}
+        title="Galerie d'images"
         iconComp={<FaRegImages />}
         onUpload={handleGalleryUpload}
         limit={10}
         accept="image/*"
         isGallery={true}
       />
+      
     </div>
   );
 }
