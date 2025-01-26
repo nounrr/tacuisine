@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/tacuisine/static/css/main.b7b1ce9b.css",
-    "main.js": "/tacuisine/static/js/main.6d41d7fd.js",
+    "main.js": "/tacuisine/static/js/main.247cc47b.js",
     "static/media/bg1.jpg": "/tacuisine/static/media/bg1.ed0ec441043ec96ff4c2.jpg",
     "index.html": "/tacuisine/index.html",
     "main.b7b1ce9b.css.map": "/tacuisine/static/css/main.b7b1ce9b.css.map",
-    "main.6d41d7fd.js.map": "/tacuisine/static/js/main.6d41d7fd.js.map"
+    "main.247cc47b.js.map": "/tacuisine/static/js/main.247cc47b.js.map"
   },
   "entrypoints": [
     "static/css/main.b7b1ce9b.css",
-    "static/js/main.6d41d7fd.js"
+    "static/js/main.247cc47b.js"
   ]
 }
